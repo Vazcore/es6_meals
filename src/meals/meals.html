@@ -1,0 +1,16 @@
+<div class="row" ng-if="meals">
+    <div class="col-xs-6 passangers">
+        <ul>
+            <li class = "passenger_list_item"
+                ng-class = "passanger.passengerId == activePassangerId ? 'active' : '' "
+                ng-repeat="passanger in meals track by passanger.passengerId">
+                {{passanger.passengerName}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-6 meals">
+        <div ng-repeat="meal in mealsC.activeMeals">
+            {{meal.productTitle}}
+        </div>
+    </div>
+</div>

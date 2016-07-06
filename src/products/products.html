@@ -1,0 +1,17 @@
+<h3>Travel Extras</h3>
+
+<div class="row" 
+     ng-repeat="row in products track by $index">     
+    <div ng-repeat="product in row track by $index"
+         ng-class="prods.productIndexActive == product.id ? 'col-xs-12' : 'col-xs-6'"
+         ng-click="prods.openProduct(product)">
+        <div class="product" style="background-image:url({{product.logo}})">
+            <div class="product_type"> 
+                {{product.type}}               
+            </div>            
+        </div>
+        <div ng-show="prods.productIndexActive == product.id" class="product_details">
+            <product type="product.type"></product>
+        </div>        
+    </div>    
+</div>
