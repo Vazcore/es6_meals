@@ -55,3 +55,29 @@
     background-color: blue !important;
     color: white;
 }
+
+.meals .meal{    
+    margin-bottom: 10px;
+}
+
+.meals img {
+    width: 100%;
+    opacity: 0.7;    
+}
+
+.i_all_space {
+    font-size: 2.5em;
+}
+.float_right {
+    float: right;
+}
+
+.add_meal {
+    cursor: pointer;
+    color: blue;
+}
+
+.description {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

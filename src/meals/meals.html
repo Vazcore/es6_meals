@@ -3,14 +3,26 @@
         <ul>
             <li class = "passenger_list_item"
                 ng-class = "passanger.passengerId == activePassangerId ? 'active' : '' "
+                ng-click="mealsC.changePassanger(passanger)"
                 ng-repeat="passanger in meals track by passanger.passengerId">
                 {{passanger.passengerName}}
             </li>
         </ul>
     </div>
     <div class="col-xs-6 meals">
-        <div ng-repeat="meal in mealsC.activeMeals">
+        <div ng-repeat="meal in mealsC.activeMeals" class="meal">
             {{meal.productTitle}}
+            <img ng-src="{{mealsC.getImg(mealsC.config.host + meal.imageList[0].url, '1000', '300')}}" alt="{{meal.description}}">
+            <div class="row">
+                <div class="col-xs-9">
+                    <p class="description">{{meal.description}}</p>
+                </div>
+                <div class="col-xs-3 pull-right">
+                    <i class="fa fa-plus-circle i_all_space float_right add_meal"
+                    ng-click="mealsC.addMeal(meal)" 
+                    aria-hidden="true"></i>
+                </div>
+            </div>
         </div>
     </div>
 </div>
